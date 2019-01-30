@@ -1,14 +1,19 @@
 package com.cat.plugin
 
+import com.android.build.api.dsl.extension.AppExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
 class TestPlugin implements Plugin<Project> {
     @Override
     void apply(Project target) {
-        println("------------------开始----------------------")
-        println("自定义插件!")
-        target.android.registerTransform(new JavasistTransform())
-        println("------------------结束----------------------->")
+        AppExtension appExtension = (AppExtension)target.getProperties().get("android")
+        appExtension.registerTransform()
+        println("------------------start hook----------------------")
+        PreHookTransform preHookTransform = new PreHookTransform()
+        File file = new File(target.buildDir, "QTInject.json")
+        preHookTransform.hookItemsFile = file
+        target.android.registerTransform(preHookTransform)
+        println("------------------hook finish----------------------->")
     }
 }

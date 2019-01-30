@@ -3,6 +3,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
 buildscript {
     repositories {
         google()
@@ -16,7 +18,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.cat.gradle.plugin:plugin:0.1.0'
+        classpath "com.cat.gradle.plugin:plugin:$hookversion"
     }
 }
 
@@ -49,4 +51,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.6.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+//    kapt "com.cat.gradle.plugin:plugin:$hookversion"
+    implementation project(':annotations')
+//    implementation project(':testmodule')
 }

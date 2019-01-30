@@ -26,7 +26,11 @@ dependencies {
     compile 'org.javassist:javassist:3.20.0-GA'
     compile 'org.aspectj:aspectjtools:1.8.1'
     compile 'com.android.tools.build:gradle-api:3.1.3'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    compile 'com.squareup:javapoet:1.9.0'
     compile 'org.ow2.asm:asm:6.2'
+    compileOnly project(':annotations')
     compile gradleApi()
     compile localGroovy()
 }

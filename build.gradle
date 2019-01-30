@@ -2,7 +2,11 @@
 
 buildscript {
     ext.kotlin_version = '1.2.31'
+    ext.hookversion='0.1.0'
     repositories {
+        maven {
+            url uri('../repo')
+        }
         google()
         jcenter()
     }
@@ -17,6 +21,9 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url uri('../repo')
+        }
         google()
         jcenter()
     }
