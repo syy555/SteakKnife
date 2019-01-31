@@ -22,7 +22,7 @@ buildscript {
     }
 }
 
-apply plugin: 'com.cat.testplugin'
+apply plugin: 'com.cat.hookplugin'
 android {
     compileSdkVersion 27
     defaultConfig {

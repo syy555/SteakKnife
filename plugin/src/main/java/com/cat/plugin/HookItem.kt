@@ -46,6 +46,9 @@ data class HookItem(var methodName: String, var desc: String, var scope: Scope, 
 
         fun checkInScope(name: String): Boolean {
             var ret = false
+            if(include.isEmpty()){
+                ret = true
+            }
             for (s in include) {
                 if (name.startsWith(s)) {
                     println("Hook job name:$name : $s end")

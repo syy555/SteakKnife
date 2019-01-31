@@ -5,7 +5,7 @@ repositories {
     mavenCentral()
 }
 group='com.cat.gradle.plugin'
-version='0.1.0'
+version='0.1.2'
 
 uploadArchives {
     repositories {
@@ -14,11 +14,6 @@ uploadArchives {
         }
     }
 }
-compileKotlin.dependsOn = compileKotlin.taskDependencies.values - 'compileJava'
-compileGroovy.dependsOn compileKotlin
-compileGroovy.classpath += files(compileKotlin.destinationDir)
-classes.dependsOn compileGroovy
-
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

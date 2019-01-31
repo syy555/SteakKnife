@@ -1,6 +1,6 @@
 package com.cat.plugin
 
-import com.cat.plugin.PreHookTransform.Companion.hookItems
+import com.cat.plugin.HookTransform.Companion.hookItems
 import org.objectweb.asm.AnnotationVisitor
 import org.objectweb.asm.ClassVisitor
 import org.objectweb.asm.MethodVisitor
