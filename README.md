@@ -2,6 +2,7 @@
 Here is a Project called javasist-util, but in fact this is a project based on ASM (LOL
 
 The main purpose of this project is help hookling method in your java/kotlin project. It seems like aspectj but more powerful.
+ps:only support static method now, maybe more functions later
 
 For example:
 
