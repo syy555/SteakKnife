@@ -9,7 +9,7 @@ import kotlin.reflect.KClass
 
 @Target(AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)
-annotation class HookParams(val targetClass:  Array<KClass<*>>, val policy: Policy = Policy.INCLUDE, val scope: Array<KClass<*>> = [], val impactPackage: Array<String> = [])
+annotation class HookParams(val targetClass: Array<KClass<*>>, val policy: Policy = Policy.INCLUDE, val scope: Array<KClass<*>> = [], val impactPackage: Array<String> = [], val isStatic: Boolean = true)
 
 enum class Policy(i: kotlin.Int) {
     INCLUDE(1), EXCLUDE(2)

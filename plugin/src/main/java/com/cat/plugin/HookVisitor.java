@@ -9,8 +9,6 @@ import static org.objectweb.asm.Opcodes.INVOKESTATIC;
 public class HookVisitor extends ClassVisitor {
     private String className;
 
-    private boolean doInject = false;
-
     private HookItem hookItem;
 
     public HookVisitor(ClassVisitor cv, HookItem item) {

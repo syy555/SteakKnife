@@ -5,7 +5,7 @@ repositories {
     mavenCentral()
 }
 group='com.cat.gradle.plugin'
-version='0.1.2'
+version='0.1.9'
 
 uploadArchives {
     repositories {

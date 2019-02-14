@@ -51,6 +51,12 @@ class PreHookVisitor : ClassVisitor(ASM5) {
                             super.visitEnum(name, descriptor, value)
                         }
 
+                        override fun visit(name: String?, value: Any?) {
+                            if(name == "isStatic"){
+                                hookItem.isStatic = value as Boolean
+                            }
+                        }
+
                         override fun visitArray(truename: String?): AnnotationVisitor? {
                             var av = super.visitArray(name)
                             av = object : AnnotationVisitor(ASM5, av) {

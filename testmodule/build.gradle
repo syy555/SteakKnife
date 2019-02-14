@@ -38,4 +38,8 @@ dependencies {
     kapt "com.cat.gradle.plugin:plugin:$hookversion"
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':annotations')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
