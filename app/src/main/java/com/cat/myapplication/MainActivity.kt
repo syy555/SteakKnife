@@ -17,13 +17,18 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, test("123"), Toast.LENGTH_LONG).show()
         }
 
-        var c = Application()
+        var d = Application()
+        var c = test1(d)
 
     }
 
 
     fun test(text: String): String {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+        return "321"
+    }
+
+    fun test1(text: Application): String {
         return "321"
     }
 }

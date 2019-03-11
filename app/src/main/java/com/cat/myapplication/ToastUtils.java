@@ -13,7 +13,9 @@ public class ToastUtils {
         return Toast.makeText(context, "Toast hook:"+text, duration);
     }
 
-    public static Application fakeApplication() {
+    @HookParams(targetClass = Toast.class, policy = Policy.INCLUDE, scope = {MainActivity.class})
+    public static Application fakeApplication(Context context) {
+        Toast.makeText(context, "init method hooked",  Toast.LENGTH_SHORT);
         return new Application();
     }
 
